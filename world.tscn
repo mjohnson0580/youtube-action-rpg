@@ -1,0 +1,104 @@
+[gd_scene load_steps=8 format=4 uid="uid://dmunh88nsktp1"]
+
+[ext_resource type="PackedScene" uid="uid://dnmscyivg5u3k" path="res://player/player.tscn" id="1_f3sb7"]
+[ext_resource type="Texture2D" uid="uid://c3c7dy6w4vmmn" path="res://world/grass_background.png" id="1_fj7yv"]
+[ext_resource type="TileSet" uid="uid://cs3sec040ewg7" path="res://world/dirt_tileset.tres" id="2_dwbse"]
+[ext_resource type="TileSet" uid="uid://dplhvuxgt8l7e" path="res://world/cliff_tileset.tres" id="3_pkg7o"]
+[ext_resource type="PackedScene" uid="uid://checul6jrgd68" path="res://world/bush.tscn" id="3_tlwt5"]
+[ext_resource type="PackedScene" uid="uid://dx27eulsghspb" path="res://world/tree.tscn" id="4_aqk2v"]
+[ext_resource type="PackedScene" uid="uid://bk63gopp4npy3" path="res://world/grass.tscn" id="7_pkg7o"]
+
+[node name="World" type="Node2D"]
+y_sort_enabled = true
+
+[node name="GroundLayer" type="Node2D" parent="."]
+z_index = -10
+
+[node name="Parallax2D" type="Parallax2D" parent="GroundLayer"]
+repeat_size = Vector2(320, 192)
+
+[node name="GrassBackground" type="TextureRect" parent="GroundLayer/Parallax2D"]
+offset_right = 320.0
+offset_bottom = 192.0
+texture = ExtResource("1_fj7yv")
+stretch_mode = 1
+
+[node name="DirtTileMapLayer" type="TileMapLayer" parent="GroundLayer"]
+tile_map_data = PackedByteArray("AAAKAAEAAAAEAAAAAAAJAAIAAAAEAAAAAAAJAAMAAAAHAAIAAAAIAAMAAAAAAAAAAAAIAAQAAAAEAAEAAAAHAAUAAAABAAAAAAAGAAUAAAAGAAAAAAAFAAUAAAAFAAMAAAAEAAUAAAABAAIAAAADAAUAAAABAAIAAAACAAUAAAAFAAEAAAABAAYAAAABAAIAAAD//wcAAAACAAIAAAD+/wgAAAAHAAIAAAD+/wkAAAACAAEAAAAAAAYAAAABAAIAAAD//wYAAAAJAAEAAAD+/wcAAAAEAAEAAAD9/wgAAAAAAAAAAAD9/wkAAAAAAAEAAAD8/wsAAAAAAAEAAAD9/woAAAAJAAEAAAD9/wsAAAACAAEAAAABAAUAAAAGAAIAAAAAAAUAAAABAAAAAAD+/wYAAAAAAAAAAAD//wUAAAAAAAAAAAD8/woAAAAAAAAAAAAGAAYAAAAAAAIAAAACAAQAAAABAAAAAAADAAQAAAABAAAAAAAEAAQAAAABAAAAAAAHAAYAAAABAAIAAAAIAAYAAAAJAAAAAAAIAAcAAAAAAAIAAAAJAAcAAAAJAAAAAAAJAAgAAAAAAAIAAAAKAAgAAAAJAAAAAAALAAgAAAABAAAAAAAKAAkAAAAAAAIAAAALAAkAAAABAAIAAAAMAAgAAAABAAAAAAANAAgAAAABAAAAAAAMAAkAAAABAAIAAAANAAkAAAABAAIAAAABAAQAAAAAAAAAAAD+/woAAAACAAIAAAD8/wwAAAAEAAEAAAD9/wwAAAACAAIAAAD8/w0AAAAHAAIAAAD8/w4AAAACAAIAAAACAAYAAAACAAIAAAAIAAUAAAAHAAIAAAAOAAgAAAACAAAAAAAQAAkAAAABAAAAAAARAAkAAAABAAAAAAASAAoAAAAJAAAAAAATAAoAAAACAAAAAAATAAsAAAACAAEAAAATAAwAAAAJAAAAAAAUAAwAAAACAAAAAAAUAA0AAAACAAEAAAAOAAkAAAAFAAMAAAAPAAkAAAAGAAAAAAASAAkAAAACAAAAAAARAAoAAAABAAIAAAASAAsAAAAAAAEAAAATAA0AAAAAAAEAAAATAA4AAAAAAAIAAAAUAA4AAAACAAIAAAAKAAcAAAACAAAAAAAJAAYAAAACAAAAAAASAAwAAAAAAAIAAAD7/w0AAAAAAAAAAAD7/w4AAAAAAAIAAAAFAAQAAAACAAAAAAAKAAIAAAAHAAMAAAALAAEAAAAHAAMAAAALAAAAAAADAAEAAAALAP//AAAEAAEAAAALAP7/AAAAAAEAAAALAP3/AAAAAAEAAAALAPz/AAAAAAAAAAAMAPz/AAACAAAAAAAMAP3/AAACAAEAAAAMAP7/AAACAAEAAAAMAP//AAACAAIAAAAJAAQAAAACAAIAAAAQAAoAAAABAAIAAAAPAAoAAAAAAAIAAAA=")
+tile_set = ExtResource("2_dwbse")
+
+[node name="CliffTileMapLayer" type="TileMapLayer" parent="GroundLayer"]
+tile_map_data = PackedByteArray("AAAAAAUAAAAAAAAAAAABAAUAAAABAAAAAAACAAUAAAABAAAAAAADAAUAAAACAAAAAAADAAYAAAAFAAIAAAACAAYAAAABAAEAAAABAAYAAAABAAEAAAAAAAYAAAAAAAEAAAADAAcAAAABAAEAAAACAAcAAAABAAEAAAADAAgAAAABAAEAAAACAAgAAAABAAEAAAABAAcAAAABAAEAAAAAAAcAAAAAAAEAAAABAAgAAAAGAAEAAAAEAAYAAAABAAAAAAAFAAYAAAABAAAAAAAGAAYAAAABAAAAAAAHAAYAAAACAAAAAAAHAAcAAAACAAIAAAAGAAcAAAAFAAEAAAAFAAcAAAABAAEAAAAEAAcAAAABAAEAAAAGAAgAAAACAAIAAAAFAAgAAAABAAIAAAAEAAgAAAAFAAEAAAAAAAgAAAAAAAIAAAABAAkAAAAAAAIAAAACAAkAAAABAAIAAAADAAkAAAABAAIAAAAEAAkAAAACAAIAAAAHAP//AAAAAAEAAAAHAAAAAAAAAAIAAAAIAP//AAABAAEAAAAJAP//AAABAAEAAAAKAP//AAABAAEAAAALAP//AAABAAEAAAALAAAAAAAFAAEAAAAMAAAAAAABAAIAAAAIAAAAAAAGAAEAAAAIAAEAAAAAAAEAAAAIAAIAAAAAAAEAAAAJAAIAAAACAAEAAAAJAAEAAAAFAAEAAAAJAAAAAAABAAEAAAAKAAAAAAABAAEAAAAKAAEAAAABAAIAAAALAAEAAAACAAIAAAAMAP//AAABAAEAAAAAAAAAAAACAAIAAAAAAP//AAAFAAEAAAABAP//AAACAAIAAAABAP7/AAAFAAEAAAAAAP7/AAABAAEAAAD///7/AAABAAEAAAD/////AAABAAEAAAD//wAAAAABAAIAAAD+//7/AAAAAAEAAAD+////AAAAAAEAAAD+/wAAAAAAAAIAAAACAP7/AAABAAIAAAABAP3/AAABAAAAAAACAP3/AAABAAAAAAADAP3/AAABAAAAAAADAP7/AAABAAIAAAAEAP7/AAACAAIAAAAEAP3/AAACAAAAAAAAAP3/AAABAAAAAAD///3/AAABAAAAAAD+//3/AAAAAAAAAAANAAAAAAACAAIAAAANAP//AAACAAEAAAANAP7/AAACAAAAAAAMAP7/AAABAAAAAAALAP7/AAABAAAAAAAKAP7/AAABAAAAAAAJAP7/AAABAAAAAAAIAP7/AAABAAAAAAAHAP7/AAAAAAAAAAAIAAMAAAAAAAIAAAAJAAMAAAACAAIAAAA=")
+tile_set = ExtResource("3_pkg7o")
+
+[node name="Player" parent="." instance=ExtResource("1_f3sb7")]
+position = Vector2(161, 86)
+
+[node name="Bush" parent="." instance=ExtResource("3_tlwt5")]
+position = Vector2(112, 70)
+
+[node name="Bush2" parent="." instance=ExtResource("3_tlwt5")]
+position = Vector2(151, 7)
+
+[node name="Bush3" parent="." instance=ExtResource("3_tlwt5")]
+position = Vector2(69, 146)
+
+[node name="Bush4" parent="." instance=ExtResource("3_tlwt5")]
+position = Vector2(241, 72)
+
+[node name="Bush5" parent="." instance=ExtResource("3_tlwt5")]
+position = Vector2(250, 288)
+
+[node name="Bush6" parent="." instance=ExtResource("3_tlwt5")]
+position = Vector2(236, 204)
+
+[node name="Bush7" parent="." instance=ExtResource("3_tlwt5")]
+position = Vector2(175, 237)
+
+[node name="Tree" parent="." instance=ExtResource("4_aqk2v")]
+position = Vector2(199, 109)
+
+[node name="Tree2" parent="." instance=ExtResource("4_aqk2v")]
+position = Vector2(101, 196)
+
+[node name="Tree3" parent="." instance=ExtResource("4_aqk2v")]
+position = Vector2(102, 21)
+
+[node name="Tree4" parent="." instance=ExtResource("4_aqk2v")]
+position = Vector2(85, 38)
+
+[node name="Grass" parent="." instance=ExtResource("7_pkg7o")]
+position = Vector2(40, 8)
+
+[node name="Grass2" parent="." instance=ExtResource("7_pkg7o")]
+position = Vector2(40, 24)
+
+[node name="Grass3" parent="." instance=ExtResource("7_pkg7o")]
+position = Vector2(56, 8)
+
+[node name="Grass4" parent="." instance=ExtResource("7_pkg7o")]
+position = Vector2(56, 24)
+
+[node name="Grass5" parent="." instance=ExtResource("7_pkg7o")]
+position = Vector2(9, 152)
+
+[node name="Grass6" parent="." instance=ExtResource("7_pkg7o")]
+position = Vector2(25, 152)
+
+[node name="Grass7" parent="." instance=ExtResource("7_pkg7o")]
+position = Vector2(248, 120)
+
+[node name="Grass8" parent="." instance=ExtResource("7_pkg7o")]
+position = Vector2(248, 104)
+
+[node name="Grass9" parent="." instance=ExtResource("7_pkg7o")]
+position = Vector2(248, 88)
+
+[node name="Grass10" parent="." instance=ExtResource("7_pkg7o")]
+position = Vector2(232, 88)
+
+[node name="Grass11" parent="." instance=ExtResource("7_pkg7o")]
+position = Vector2(232, 104)
+
+[node name="Grass12" parent="." instance=ExtResource("7_pkg7o")]
+position = Vector2(232, 120)
