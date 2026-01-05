@@ -18,6 +18,18 @@ tracks/0/keys = {
 "update": 1,
 "values": [0]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Area2D/CollisionPolygon2D:polygon")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [PackedVector2Array()]
+}
 
 [sub_resource type="Animation" id="Animation_kb6p2"]
 resource_name = "attack_down"
@@ -34,6 +46,18 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
 "values": [36, 37, 38, 39]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Area2D/CollisionPolygon2D:polygon")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [PackedVector2Array(6, -5, 17, -5, 18, -4, 18, -3, 17, -2, 6, -2), PackedVector2Array(-4, 22, 1, 22, 11, 17, 16, 8, 16, 3, 10, 7, 4, 9, -4, 9), PackedVector2Array(-20, 9, -17, 15, -8, 21, 1, 22, 10, 18, 15, 11, 16, 5, 10, 11, 1, 12, -6, 8, -11, 3), PackedVector2Array(-22, -5, -22, 0, -18, 6, -15, 7, -16, 2, -12, -2, -9, -2, -10, -5), PackedVector2Array()]
 }
 
 [sub_resource type="Animation" id="Animation_yllr7"]
@@ -52,6 +76,18 @@ tracks/0/keys = {
 "update": 1,
 "values": [32, 33, 34, 35]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Area2D/CollisionPolygon2D:polygon")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [PackedVector2Array(-2, -24, -1, -25, 0, -25, 1, -24, 1, -17, -2, -17), PackedVector2Array(-12, -1, -26, -1, -25, -10, -21, -16, -12, -20, -3, -21, -2, -19, -7, -17, -12, -10), PackedVector2Array(-8, 12, -16, 10, -22, 5, -26, -1, -25, -10, -21, -16, -15, -19, -6, -20, -6, -19, -14, -16, -16, -8, -13, -3, -3, 0, -3, 3), PackedVector2Array(3, 2, 3, 13, -3, 13, -12, 10, -12, 9, -6, 9, -1, 7, 0, 2), PackedVector2Array()]
+}
 
 [sub_resource type="Animation" id="Animation_2ieo8"]
 resource_name = "attack_right"
@@ -69,6 +105,18 @@ tracks/0/keys = {
 "update": 1,
 "values": [24, 25, 26, 27]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Area2D/CollisionPolygon2D:polygon")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [PackedVector2Array(-1, -17, 2, -17, 2, -24, 1, -25, 0, -25, -1, -24), PackedVector2Array(12, -1, 26, -1, 27, -3, 25, -10, 21, -16, 12, -20, 7, -21, 3, -21, 2, -19, 6, -18, 10, -13, 11, -10, 11, -3), PackedVector2Array(3, 0, 3, 3, 8, 12, 13, 11, 22, 6, 26, -1, 26, -7, 24, -12, 21, -16, 12, -20, 6, -20, 6, -19, 9, -19, 14, -16, 16, -12, 15, -5, 11, -2), PackedVector2Array(-3, 2, 0, 2, 1, 7, 6, 9, 12, 9, 11, 11, 3, 13, -3, 13), PackedVector2Array()]
+}
 
 [sub_resource type="Animation" id="Animation_ebec5"]
 resource_name = "attack_up"
@@ -85,6 +133,18 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
 "values": [28, 29, 30, 31]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Area2D/CollisionPolygon2D:polygon")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [PackedVector2Array(-21, -7, -20, -6, -9, -6, -9, -9, -20, -9, -21, -8), PackedVector2Array(1, -17, 1, -26, 0, -27, -4, -27, -12, -24, -18, -16, -20, -11, -20, -5, -19, -5, -17, -10, -10, -15), PackedVector2Array(9, -9, 11, -9, 19, -14, 19, -16, 12, -24, 3, -27, -4, -27, -12, -24, -16, -20, -18, -14, -17, -14, -15, -17, -11, -20, -2, -20, 2, -18), PackedVector2Array(10, -4, 21, -4, 21, -12, 16, -20, 15, -20, 16, -12, 13, -7, 10, -7), PackedVector2Array()]
 }
 
 [sub_resource type="Animation" id="Animation_e7oew"]
@@ -451,14 +511,16 @@ states/RollState/position = Vector2(409, -1.8719902)
 transitions = ["Start", "MoveState", SubResource("AnimationNodeStateMachineTransition_kb6p2"), "MoveState", "AttackState", SubResource("AnimationNodeStateMachineTransition_yw30f"), "AttackState", "MoveState", SubResource("AnimationNodeStateMachineTransition_qjkh3"), "MoveState", "RollState", SubResource("AnimationNodeStateMachineTransition_g6k8r"), "RollState", "MoveState", SubResource("AnimationNodeStateMachineTransition_boad6")]
 graph_offset = Vector2(0, -63.87199)
 
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_g1dw6"]
+
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_32hag"]
-graph_offset = Vector2(-423.17017, 121.28572)
-nodes/output/position = Vector2(280, 200)
+graph_offset = Vector2(-507, 73)
+nodes/output/position = Vector2(480, 200)
 nodes/StateMachine/node = SubResource("AnimationNodeStateMachine_wodsf")
 nodes/StateMachine/position = Vector2(20, 160)
-node_connections = [&"output", 0, &"StateMachine"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_g1dw6"]
+nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_g1dw6")
+nodes/TimeScale/position = Vector2(290, 160)
+node_connections = [&"output", 0, &"TimeScale", &"TimeScale", 0, &"StateMachine"]
 
 [node name="Player" type="CharacterBody2D"]
 motion_mode = 1
@@ -475,6 +537,7 @@ libraries = {
 }
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
+callback_mode_discrete = 1
 tree_root = SubResource("AnimationNodeBlendTree_32hag")
 advance_expression_base_node = NodePath("..")
 anim_player = NodePath("../AnimationPlayer")
@@ -482,6 +545,7 @@ parameters/StateMachine/AttackState/blend_position = Vector2(0, -0.29014087)
 parameters/StateMachine/MoveState/RunState/blend_position = Vector2(0, -0.30044842)
 parameters/StateMachine/MoveState/StandState/blend_position = Vector2(0, -0.29147983)
 parameters/StateMachine/RollState/blend_position = Vector2(0, -0.3014084)
+parameters/TimeScale/scale = 1.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -8)
@@ -499,5 +563,4 @@ texture = ExtResource("3_g1dw6")
 
 [node name="Area2D" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("CircleShape2D_g1dw6")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
